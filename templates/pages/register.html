@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% load widget_tweaks %}
+
+
+{% block 'content' %}
+
+<br><br>
+    <div class="container mt-4" >
+        <div class="row justify-content-center">
+        <div class="col-8">
+            <h2 class="mt-2">Sign Up</h2>
+            <hr class="mt-4 mb-4">
+                <form method="post">
+                    {% csrf_token %}
+                    <br>
+                    <label>Username*</label>
+                    {% render_field registerForm.username class="form-control" placeholder=form.username.label %}
+                    <label class="mt-4">Email*</label>
+                    {% render_field registerForm.email class="form-control" placeholder=form.email.label %}
+                    <label class="mt-4">Password*</label>
+                    {% render_field registerForm.password1 class="form-control" placeholder=form.password.label %}
+                    <label class="mt-4">Confirm Password*</label>
+                    {% render_field registerForm.password2 class="form-control" placeholder=form.confirm_password.label %}
+                    <button type="submit" class="mt-5 btn btn-success">Sign Up</button>
+                    <br><br><br><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock 'content' %}
+
+

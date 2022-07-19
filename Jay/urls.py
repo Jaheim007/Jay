@@ -26,7 +26,9 @@ urlpatterns = [
     path('about/', views.Aboutpage.as_view(), name="about"),
     path('shop_single/', views.Shopsingle.as_view(), name="shop_single"),
     path('contact/', views.Contact.as_view(), name="contact"),
-    path('shop/', views.Shop.as_view(), name="shop")
+    path('shop/', views.Shop.as_view(), name="shop"),
+    path('connection/', views.Connection.as_view(), name="connection"),
+    path('register/', views.Register.as_view(), name="register")
 ]
 
 if settings.DEBUG:
