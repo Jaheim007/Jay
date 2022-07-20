@@ -3,7 +3,7 @@ from django.views.generic import View
 from Authentication import models
 
 class Homepage(View):
-    template_name = "pages\index.html"
+    template_name = "pages/index.html"
 
     def get(self , request):
         return render(request, self.template_name)
