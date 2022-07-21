@@ -1,7 +1,8 @@
-from pydoc import visiblename
-from django.urls import path
-from Website import views
+# from django.urls import path
+# from Website import views
 
-urlpatterns = [
-    path('', views.index, name="Home"),
-]
+# urlpatterns = [
+#     path('', views.register_request,),
+#     # path('', views.register, name="register" ),
+    
+# ]

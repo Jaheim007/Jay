@@ -15,18 +15,22 @@ Including another URLconf
 """
 from unicodedata import name
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from Website import views
+from Authentication import views as auth
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path("register/", include("Website.urls")),
     path('', views.Homepage.as_view(), name="home"),
     path('about/', views.Aboutpage.as_view(), name="about"),
     path('shop_single/', views.Shopsingle.as_view(), name="shop_single"),
     path('contact/', views.Contact.as_view(), name="contact"),
-    path('shop/', views.Shop.as_view(), name="shop")
+    path('shop/', views.Shop.as_view(), name="shop"),
+    path('connection/', auth.Connection.as_view(), name="connection"),
+    path('register/', auth.Register.as_view(), name="register")
 ]
 
 if settings.DEBUG:

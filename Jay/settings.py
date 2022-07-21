@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'Authentication',
     'Features',
     'Website',
-    'phonenumber_field'
+    'phonenumber_field', 
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
