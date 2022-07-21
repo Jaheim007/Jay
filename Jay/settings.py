@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'Features',
     'Website',
     'phonenumber_field', 
-    'widget_tweaks'
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
