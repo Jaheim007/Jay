@@ -73,12 +73,20 @@ class Register(View):
         success = True
         if request.method == "POST": 
             registerForm = NewUserForm(request.POST) 
-            if registerForm.is_valid():    
+            if registerForm.is_valid(): 
+                print(registerForm)   
                 user = registerForm.save()
-              
+                print(user)
+                login(request, user)
+                msg = 'Un message a été envoyé à votre adresse e-mail'
+        
+                data = {
+                'msg': msg,
+                'success': success
+                }
                 return redirect("/")
-            else:
-                registerForm = NewUserForm() 
+            
+        registerForm = NewUserForm() 
         return render (request, self.template_name, locals())
                  
         
